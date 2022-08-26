@@ -1,5 +1,5 @@
 <template>
-  <Test />
+  <BookForm />
 </template>
 
 <script lang="ts">

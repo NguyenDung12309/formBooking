@@ -33,14 +33,15 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/styles/style.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
-
+  components: {
+    dirs: ['~/components', '~/components/form'],
+  },
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
@@ -51,6 +52,9 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/vuetify',
   ],
+  vuetify: {
+    treeShake: true,
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/tailwindcss'],
