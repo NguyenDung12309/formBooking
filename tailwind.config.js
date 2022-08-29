@@ -24,6 +24,7 @@ module.exports = {
     colors: {
       primary: '#4A3AFF',
       'primary-bold': '#3120e9',
+      'primary-light': '#4a3aff26',
       secondary: '#6F6C90',
       white: '#ffffff',
       danger: '#cc0033',
@@ -33,6 +34,7 @@ module.exports = {
     },
     extend: {
       boxShadow: {
+        ssx: '0px 2px rgba(19, 18, 66, 0.07)',
         sx: '0px 2px 6px rgba(19, 18, 66, 0.07)',
         sm: '0px 3px 12px rgba(74, 58, 255, 0.18)',
         md: '0px 8px 25px rgba(13, 10, 44, 0.06);',

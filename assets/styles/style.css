@@ -14,13 +14,82 @@ body {
   flex-direction: column;
 }
 
-.filter-svg {
+.transitionFocus {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
 
-input:focus + .filter-svg {
+input:focus + .transitionFocus {
   filter: invert(38%) sepia(99%) saturate(6919%) hue-rotate(245deg)
     brightness(100%) contrast(102%);
 }
+
+.checked {
+  transition: opacity 300ms ease-out;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin-right: 0;
+  overflow: hidden;
+}
+
+.uncheck {
+  opacity: 1;
+  height: 24px;
+  width: 24px;
+  transition: opacity 300ms ease-out;
+  margin-right: 12px;
+}
+
+input:checked ~ label .checked {
+  opacity: 1;
+  height: 24px;
+  width: 24px;
+  margin-right: 12px;
+}
+
+input:checked ~ label .uncheck {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  margin-right: 0;
+  overflow: hidden;
+}
+
+/* .theme--light.v-stepper .v-stepper__step__step {
+  color: #eff0f6;
+}
+.v-stepper__step__step {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  width: 34px !important;
+  height: 34px !important;
+  display: block;
+  background: #4a3aff;
+}
+
+.v-progress-linear__determinate {
+  border-radius: 40px;
+}
+
+v-stepper__step--active {
+  background-color: #4a3aff;
+}
+
+.theme--light.v-stepper
+  .v-stepper__step:not(.v-stepper__step--active):not(.v-stepper__step--complete):not(.v-stepper__step--error)
+  .v-stepper__step__step {
+  background: #eff0f6 !important;
+  color: #4a3aff;
+}
+
+.v-stepper__step--active
+  .v-stepper__step--complete
+  .v-stepper__step--error
+  .v-stepper__step__step {
+  background: #4a3aff;
+  color: #eff0f6;
+} */
